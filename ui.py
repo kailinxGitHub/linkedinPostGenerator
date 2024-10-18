@@ -27,7 +27,7 @@ with st.sidebar:
             value=1.0
         )
         max_tokens = st.slider(
-            "How long do you want your post be?",
+            "How lon (tokens: 1 word ≈ 1.3 tokens) do you want your post be?",
             min_value=0,
             max_value=400,
             value=10
@@ -44,7 +44,7 @@ with st.sidebar:
         content_form_submitted = st.form_submit_button("Write")
         if content_form_submitted:
             st.write("You submitted the form")
-            generated_content = query(temperature, max_tokens, context, content)
+        generated_content = query(temperature, max_tokens, context, content)
 
 # Generated Post
 st.markdown("---")
